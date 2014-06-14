@@ -1,8 +1,10 @@
 var styles = window.getComputedStyle;
+var classes = require('classes');
 
 function Collection(selector, root) {
   root = root || document;
-  var els = root.querySelectorAll(selector);
+  var els = (typeof selector !== 'string') ? selector
+            : root.querySelectorAll(selector);
 
   var collection = Object.create(Array.prototype);
   collection = (Array.apply( collection, els ) || collection);
@@ -26,13 +28,13 @@ function mix(o, methods) {
 
 var methods = {
   addClass: function (clz) {
-    this.classList.add(clz);
+    classes(this).add(clz);
   },
   removeClass: function (clz) {
-    this.classList.remove(clz);
+    classes(this).remove(clz);
   },
   toggleClass: function (clz) {
-    this.classList.toggle(clz);
+    classes(this).toggle(clz);
   },
   show: function (display) {
     display = display || 'block';

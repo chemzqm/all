@@ -3,7 +3,9 @@
   "description": "select nodes and use array methods",
   "version": "0.0.1",
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+      "component/classes": "*"
+  },
   "development": {
     "dependencies": {
       "component/assert": "*"

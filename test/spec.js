@@ -22,6 +22,10 @@ afterEach(function() {
 })
 
 describe('all', function() {
+  it('should works with nodes', function () {
+    var els = container.querySelectorAll('.item');
+    assert(all(els).length === 5);
+  })
 
   it('should addClass to all elements', function() {
     var els = all('.item', container).addClass('black');
@@ -30,7 +34,7 @@ describe('all', function() {
     }
   })
 
-  it('shold be removed', function () {
+  it('should be removed', function () {
     var els = all('.item', container).remove();
     for (var i = 0, len = els.length; i < len; i++) {
       assert(els[i].parentNode === null);

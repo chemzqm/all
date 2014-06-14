@@ -1,6 +1,6 @@
 # all
 
-Select all nodes and do something, instance are extended from array, so you can use array methods.
+Select all nodes and do something, instance are extended from array, so you can use array methods and array notation.
 
 ## Installation
 
@@ -11,8 +11,9 @@ Select all nodes and do something, instance are extended from array, so you can 
 ## API
 
 ### all(selector, [root])
+### all(ELements)
 
-* Init with css selector and optional root element
+* Init with css selector or elements and optional root element
 
 ### .addClass(classname)
 
